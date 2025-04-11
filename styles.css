@@ -13,10 +13,11 @@ body, html {
   position: relative;
   background: url('image2.jpg') no-repeat center center/cover;
   height: 95vh;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 95px;
 }
 
 .overlay {
@@ -81,20 +82,42 @@ body, html {
   text-align: center;
   padding: 0 20px;
   margin-bottom: 100px;
-  margin-top: 50px;
+  margin-top: 95px;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 15px;
   font-weight: 700;
+  opacity: 0;  /* Start with invisible */
+  transform: translateY(30px); /* Start slightly below */
+  animation: slideIn 2s forwards; /* Apply the animation */
 }
 
 .hero-content p {
   font-size: 1rem;
   max-width: 600px;
   margin: 0 auto 30px;
+  opacity: 0;  /* Start with invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeIn 1.5s forwards 0.5s; /* Apply the fade-in animation with delay */
 }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position is at the original spot */
+  }
+
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position is at the original spot */
+  }
+}
+
 
 .btn {
   background: #00c6ff;
@@ -104,11 +127,32 @@ body, html {
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.3s ease;
+  opacity: 0;  /* Start invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: buttonFadeIn 1s forwards 1s; /* Apply the fade-in and move-up animation */
+  margin-top: 50px;
+
 }
 
 .btn:hover {
   background: #0088cc;
 }
+
+@keyframes buttonFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Final position is at the original spot */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 .side-icons {
   position: absolute;
@@ -135,6 +179,14 @@ body, html {
 
 .side-icons a:hover {
   background-color: #00c6ff;
+}
+
+
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -169,15 +221,15 @@ body, html {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #c21818;
+  color: #1859c2;
   font-weight: bold;
   margin-bottom: 12px;
 }
 
 .description {
   font-size: 18px;
-  color: #666;
-  margin-bottom: 45px;
+  color: #880b15;
+  margin-bottom: 60px;
 }
 
 .features {
@@ -195,7 +247,20 @@ body, html {
 .icon {
   width: 40px;
   height: 40px;
+  background-image: url('icon1.JPG'); /* Update with your image path */
+  background-size: cover; /* Ensures the image covers the area */
+  background-position: center; /* Centers the image */
+
 }
+
+
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 
 .stats-section {
@@ -234,6 +299,15 @@ body, html {
 }
 
 
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
 
 .branding-section {
   max-width: 700px;
@@ -242,6 +316,9 @@ body, html {
   background: linear-gradient(to bottom right, #f6f9fc, #e9eef5);
   color: #1e1e2f;
   font-family: 'Quicksand', sans-serif;
+
+  
+
 }
 
 .tag {
@@ -284,6 +361,15 @@ body, html {
 }
 
 
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -313,6 +399,13 @@ body, html {
   background: linear-gradient(to bottom right, #ffe0b2, #ffcc80);
 }
 
+
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 
@@ -389,6 +482,13 @@ body, html {
   text-decoration: underline;
 }
 
+
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 
@@ -473,6 +573,13 @@ body, html {
   background-color: #f0f0f0;
 }
 
+
+@media (max-width: 768px) {
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 
@@ -724,6 +831,8 @@ body, html {
   color: #ffffff;
   margin-top: 10px;
 }
+
+
 
 .footer-column ul {
   list-style: none;
