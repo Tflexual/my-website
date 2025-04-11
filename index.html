@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart SEO</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+<header class="hero">
+    <div class="overlay"></div>
+    
+    <div class="header-container">
+      <nav class="navbar">
+        <div class="logo">Smart SEQ</div>
+        
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#"><i class="fas fa-search"></i></a></li>
+        </ul>
+        
+        <a href="#" class="cta">Let's talk</a>
+      </nav>
+      
+      <div class="hero-content">
+        <h1>Turning Creative Ideas<br>into Success</h1>
+        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua quis nostrud exerc.</p>
+        <a href="#" class="btn">Discover Now</a>
+      </div>
+      
+      <div class="side-icons">
+        <a href="#"><i class="fas fa-cart-shopping"></i></a>
+        <a href="#"><i class="fas fa-image"></i></a>
+        <a href="#"><i class="fas fa-credit-card"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="images">
+      <img src="image4.jpg" alt="Person with headphones" class="image top-image">
+      <img src="image3.jpg" alt="Man on laptop" class="image bottom-image">
+    </div>
+    <div class="content">
+      <p class="label">CREATIVE AGENCY</p>
+      <h1>We help your business grow</h1>
+      <p class="description">
+        Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <img src="icon1.png" alt="Creative icon" class="icon">
+          <div>
+            <h3>Creative design</h3>
+            <p>Natus error sit voluptatem accusantium doloremque.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="icon2.png" alt="Possibilities icon" class="icon">
+          <div>
+            <h3>Endless possibilities</h3>
+            <p>Sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-section">
+    <div class="stat">
+      <span class="number" data-target="98">0</span>
+      <span class="label">Projects</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="number" data-target="65">0</span>
+      <span class="label">People</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="number" data-target="10">0</span>
+      <span class="label">Years</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="number" data-target="15">0</span>
+      <span class="label">Offices</span>
+    </div>
+  </div>
+  
+  <script>
+    const counters = document.querySelectorAll('.number');
+  
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+  
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+  
+      updateCount();
+    });
+  </script>
+
+
+<div class="branding-section">
+    <span class="tag">Creative Solutions</span>
+    <h2 class="title">We make unique & memorable brands</h2>
+    <p class="text">
+      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+      voluptatum deleniti atque lorem in voluptate velit iusto odio dignissimos duci esse.
+    </p>
+    <p class="text">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+      laudantium, totam rem aperiam, eaque ipsa quae.
+    </p>
+    <a href="#" class="read-more">Read More</a>
+  </div>
+
+
+  <div class="card-container">
+    <div class="card">
+      <img src="image1.png" alt="Folder Icon" />
+    </div>
+    <div class="card highlight">
+      <img src="image2.png" alt="Bar Chart Icon" />
+    </div>
+    <div class="card">
+      <img src="image1.png" alt="Folder Icon" />
+    </div>
+  </div>
+
+
+  <div class="subscription-section">
+    <div class="subscription-text">
+      <h2>Subscribe for the<br>exclusive updates!</h2>
+    </div>
+    <form class="subscription-form">
+      <div class="input-group">
+        <input type="email" placeholder="Enter Your Email Address" required />
+        <button type="submit">
+          <span class="icon">📨</span> Subscribe
+        </button>
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" required />
+        I agree to the <a href="#">Privacy Policy</a>.
+      </label>
+    </form>
+  </div>
+
+  
+
+  <div class="testimonial-section">
+    <button class="nav-button left">&#8592;</button>
+  
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/100" alt="User" class="avatar" />
+      <p class="testimonial-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <div class="quote-icon">❝❞</div>
+      <h3 class="name">John Dou</h3>
+      <p class="role">Expert</p>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  
+    <button class="nav-button right">&#8594;</button>
+  </div>
+  
+  
+
+  <section class="services-section">
+    <div class="content">
+      <h5 class="subtitle">Who We Are</h5>
+      <h2 class="title">
+        We provide best <br />
+        digital services
+      </h2>
+      <p class="description">
+        Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia.
+      </p>
+      <a href="#" class="btn">Discover Now</a>
+    </div>
+  
+    <div class="images">
+      <img src="https://via.placeholder.com/300x400" alt="Woman" class="image-back" />
+      <img src="https://via.placeholder.com/300x300" alt="Laptop" class="image-front" />
+    </div>
+  </section>
+  
+
+  <section class="logo-section">
+    <div class="logo-container">
+      <img src="logos/codan.png" alt="Codan logo">
+      <img src="logos/m.png" alt="M logo">
+      <img src="logos/orca.png" alt="Orca logo">
+      <img src="logos/minagood.png" alt="Minagood logo">
+      <img src="logos/br.png" alt="BR logo">
+      <img src="logos/arquivar.png" alt="Arquivar logo">
+    </div>
+  </section>
+  
+  
+  <section class="blog-section">
+    <h2 class="section-subtitle">OUR BLOG</h2>
+    <h1 class="section-title">Latest articles</h1>
+    
+    <div class="blog-cards">
+      <div class="blog-card">
+        <img src="images/blog1.jpg" alt="Blog 1">
+        <div class="card-content">
+          <p class="category">MEDIA SEO</p>
+          <h3 class="title">Top 5 targeting techniques to attract customers</h3>
+          <p class="meta">Apr 21, 2020 • 0 Comments</p>
+        </div>
+      </div>
+  
+      <div class="blog-card">
+        <img src="images/blog2.jpg" alt="Blog 2">
+        <div class="card-content">
+          <p class="category">MEDIA SEO</p>
+          <h3 class="title">Why do project managers need to focus on strategy?</h3>
+          <p class="meta">Apr 21, 2020 • 0 Comments</p>
+        </div>
+      </div>
+  
+      <div class="blog-card">
+        <img src="images/blog3.jpg" alt="Blog 3">
+        <div class="card-content">
+          <p class="category">MEDIA SEO</p>
+          <h3 class="title">What’s trending on designers’ charts this spring</h3>
+          <p class="meta">Apr 21, 2020 • 0 Comments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Office -->
+      <div class="footer-column">
+        <h4>Office</h4>
+        <p>Germany —<br>785 15h Street, Office 478<br>Berlin, De 81566</p>
+        <a href="mailto:info@email.com" class="footer-email">info@email.com</a>
+        <p class="footer-phone">+1 840 841 25 69</p>
+      </div>
+  
+      <!-- Links -->
+      <div class="footer-column">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+  
+      <!-- Socials -->
+      <div class="footer-column">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter -->
+      <div class="footer-column newsletter">
+        <h4>Newsletter</h4>
+        <form>
+          <div class="newsletter-input">
+            <span class="email-icon">📧</span>
+            <input type="email" placeholder="Enter Your Email Address" required>
+            <button type="submit">➜</button>
+          </div>
+          <label class="privacy-check">
+            <input type="checkbox" required>
+            I agree to the <a href="#">Privacy Policy</a>.
+          </label>
+        </form>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>AxiomThemes © 2025. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  
+
+</body>
+</html>
+
+  
+ 
+
